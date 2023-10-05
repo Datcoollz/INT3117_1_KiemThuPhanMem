@@ -29,9 +29,18 @@ int main()
 	int n;
     vi a;
 	cin >> n;
+    
+    if(n <= 0 || n > 9){
+        cout << "Input error";
+        return 0;
+    }
     for(int i = 0; i < n; i++){
         int inp;
         cin >> inp;
+        if(inp < 0 || inp > 9) {
+            cout << "Input error";
+            return;
+        }
         a.push_back(inp);
     }
     cout << maxPresent(n, a);
